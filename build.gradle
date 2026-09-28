@@ -1,0 +1,47 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.143'
+}
+
+version = mod_version
+group = mod_group_id
+base { archivesName = mod_id }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+    runs {
+        client { client() }
+        server { server(); programArgument '--nogui' }
+    }
+    mods {
+        "${mod_id}" { sourceSet(sourceSets.main) }
+    }
+}
+
+dependencies {
+    // TACZ 前置模组 jar，仅编译期依赖（运行时由玩家自行安装）
+    // 如果此路径不存在，请将 tacz-neoforge-1.21.1-1.1.8-hotfix-r6.jar 复制到项目根目录的 libs/ 文件夹并修改此行
+    compileOnly files("E:/HMCL-3.6.12/.minecraft/versions/FloatingReverie/mods/[功能][永恒枪械工坊]tacz-neoforge-1.21.1-1.1.8-hotfix-r6.jar")
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    def props = [
+        minecraft_version      : minecraft_version,
+        minecraft_version_range: minecraft_version_range,
+        neo_version            : neo_version,
+        loader_version_range   : loader_version_range,
+        mod_id                 : mod_id,
+        mod_name               : mod_name,
+        mod_license            : mod_license,
+        mod_version            : mod_version,
+        tacz_version           : tacz_version
+    ]
+    inputs.properties props
+    filteringCharset = 'UTF-8'
+    filesMatching('META-INF/neoforge.mods.toml') { expand props }
+}

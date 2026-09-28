@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Client",
+      "presentation": {
+        "group": "Mod Development - tacz-damage-rate",
+        "order": 0
+      },
+      "projectName": "tacz-damage-rate",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@E:\\HMCL-3.6.12\\tacz_damage_config\\build\\moddev\\clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@E:\\HMCL-3.6.12\\tacz_damage_config\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dtacz_damage_config%%E:\\HMCL-3.6.12\\tacz_damage_config\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Server",
+      "presentation": {
+        "group": "Mod Development - tacz-damage-rate",
+        "order": 1
+      },
+      "projectName": "tacz-damage-rate",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@E:\\HMCL-3.6.12\\tacz_damage_config\\build\\moddev\\serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@E:\\HMCL-3.6.12\\tacz_damage_config\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dtacz_damage_config%%E:\\HMCL-3.6.12\\tacz_damage_config\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "tacz_damage_config.config.title": "TACZ Weapon Damage Config",
+  "tacz_damage_config.config.global_multiplier": "Global Damage Multiplier",
+  "tacz_damage_config.config.col_gun": "Gun ID",
+  "tacz_damage_config.config.col_orig": "Original",
+  "tacz_damage_config.config.col_custom": "Custom",
+  "tacz_damage_config.config.col_effective": "Effective",
+  "tacz_damage_config.config.no_guns": "No guns found (load a world first to populate gun pack data)",
+  "tacz_damage_config.config.save": "Save",
+  "tacz_damage_config.config.cancel": "Cancel",
+  "tacz_damage_config.tooltip.damage": "Damage: %s"
+}

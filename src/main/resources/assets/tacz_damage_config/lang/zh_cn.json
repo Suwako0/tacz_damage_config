@@ -1,0 +1,12 @@
+{
+  "tacz_damage_config.config.title": "TACZ 武器伤害配置",
+  "tacz_damage_config.config.global_multiplier": "全局伤害倍率",
+  "tacz_damage_config.config.col_gun": "武器ID",
+  "tacz_damage_config.config.col_orig": "原始伤害",
+  "tacz_damage_config.config.col_custom": "自定义伤害",
+  "tacz_damage_config.config.col_effective": "生效伤害",
+  "tacz_damage_config.config.no_guns": "暂无枪械（请先加载存档以读取枪包数据）",
+  "tacz_damage_config.config.save": "保存",
+  "tacz_damage_config.config.cancel": "取消",
+  "tacz_damage_config.tooltip.damage": "伤害量: %s"
+}
